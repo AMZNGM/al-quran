@@ -1,0 +1,12 @@
+# Ignore all HTML files
+*.html
+
+# But don't ignore JSX files
+!**/*.jsx
+!**/*.tsx
+!**/*.js
+!**/*.ts
+!**/*.json
+!**/*.md
+!**/*.css
+!**/*.scss
