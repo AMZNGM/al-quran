@@ -1,4 +1,4 @@
-import { getAyahs, quranClient } from '@/lib/quran-api'
+import { getAyahs, quranClient, getChapter } from '@/lib/quran-api'
 import AyahView from '@/components/AyahView'
 import { Suspense } from 'react'
 import Link from 'next/link'
@@ -19,7 +19,8 @@ export default async function SurahPage({ params }: { params: Promise<{ id: stri
   // Parallel data fetching
   const [verses, chapterInfo] = await Promise.all([
     getAyahs({ chapterId, limit: 300 }), // Get all verses (limit increased)
-    quranClient.chapters.findById(chapterId as any),
+    // quranClient.chapters.findById(chapterId as any),
+    getChapter(chapterId as any),
   ])
 
   return (

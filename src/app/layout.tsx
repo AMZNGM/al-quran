@@ -1,18 +1,30 @@
 import './globals.css'
-import { Cairo, Amiri } from 'next/font/google'
+import localFont from 'next/font/local'
 import AppWrapper from '@/components/app-components/AppWrapper'
 
-const fontArab = Cairo({
-  subsets: ['latin'],
-  variable: '--font-arab',
-  display: 'swap',
+const fontMain = localFont({
+  src: '../fonts/norm.ttf',
+  variable: '--font-main',
 })
 
-const amiri = Amiri({
-  subsets: ['arabic'],
-  weight: ['400', '700'],
-  variable: '--font-amiri',
-  display: 'swap',
+const fontMid = localFont({
+  src: '../fonts/mid.ttf',
+  variable: '--font-mid',
+})
+
+const fontKufi = localFont({
+  src: '../fonts/kufi.ttf',
+  variable: '--font-kufi',
+})
+
+const fontIcons = localFont({
+  src: '../fonts/icons.ttf',
+  variable: '--font-icons',
+})
+
+const fontNum = localFont({
+  src: '../../public/fonts/num.ttf',
+  variable: '--font-num',
 })
 
 export const metadata = {
@@ -39,11 +51,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${fontArab.variable} ${amiri.variable}`}>
-      <body
-        suppressHydrationWarning
-        className="relative w-full h-full bg-bg selection:bg-main/75 font-arab text-text selection:text-text antialiased md:subpixel-antialiased uppercase scroll-smooth"
-      >
+    <html
+      lang="ar"
+      dir="rtl"
+      suppressHydrationWarning
+      className={`${fontMain.variable} ${fontKufi.variable} ${fontMid.variable} ${fontIcons.variable} ${fontNum.variable}`}
+    >
+      <body className="relative w-dvw h-dvh bg-bg selection:bg-main/75 font-main text-text selection:text-text antialiased md:subpixel-antialiased scroll-smooth">
         <AppWrapper>{children}</AppWrapper>
       </body>
     </html>

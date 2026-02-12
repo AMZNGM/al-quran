@@ -10,7 +10,7 @@ interface AyahViewProps {
 
 export default function AyahView({ verses, bismillahPre }: AyahViewProps) {
   return (
-    <div className="max-w-4xl min-h-[80vh] bg-white dark:bg-gray-900/50 shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-800 rounded-3xl mx-auto p-8">
+    <div className="max-w-4xl min-h-[80vh] bg-white shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-800 rounded-3xl mx-auto p-8">
       {bismillahPre && (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -32,7 +32,7 @@ export default function AyahView({ verses, bismillahPre }: AyahViewProps) {
           >
             <div className="flex items-start gap-6 leading-loose">
               <span className="font-amiri font-bold text-emerald-500/80 text-xl mt-3 select-none">﴿{verse.verseNumber}﴾</span>
-              <p className="flex-1 font-amiri text-gray-800 dark:text-gray-100 text-4xl text-justify leading-[2.5]">{verse.textUthmani}</p>
+              <p className="flex-1 font-amiri text-text text-4xl text-justify leading-[2.5]">{verse.textUthmani}</p>
             </div>
           </motion.div>
         ))}

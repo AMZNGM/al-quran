@@ -1,12 +1,12 @@
 export const SEO = {
   '/': {
-    title: 'Home',
+    title: 'Al Quran',
     description: 'Al Quran - Read the Quran',
     keywords: ['Al Quran', 'Quran', 'Read the Quran'],
   },
 
   '*': {
-    title: 'Al Quran - Not found page',
+    title: 'Not found page | Al Quran',
     description: 'Sorry, the page you are looking for does not exist. Please check the URL and try again.',
     keywords: ['Al Quran', 'not found', 'page not found', 'error'],
   },

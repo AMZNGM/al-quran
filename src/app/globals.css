@@ -1,19 +1,17 @@
 @import 'tailwindcss';
 @theme {
-  --color-main: #8e8e8e;
-  --color-bg: #000;
-  --color-text: #fff;
+  --color-main: #213452;
+  --color-bg: #2e2e2e;
+  --color-text: #e9dbbe;
 
-  --font-arab: var(--font-arab);
-  --font-amiri: var(--font-amiri);
+  --font-main: var(--font-main);
+  --font-mid: var(--font-mid);
+  --font-kufi: var(--font-kufi);
+  --font-icons: var(--font-icons);
+  --font-num: var(--font-num);
 }
+
 * {
   box-sizing: border-box;
-}
-html {
   scrollbar-width: none;
-}
-:lang(ar),
-[lang='ar'] {
-  font-family: var(--font-arab);
 }

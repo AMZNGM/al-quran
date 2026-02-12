@@ -11,7 +11,7 @@ export default function AppWrapper({ children }: { children: React.ReactNode }) 
       <ScrollProvider>
         <ScrollToTop />
         <Banner />
-        <Header />
+        {/* <Header /> */}
         {/* <Navbar /> */}
         {children}
         {/* <Footer /> */}
